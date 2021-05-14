@@ -1,0 +1,312 @@
+* {
+  padding: 0;
+  margin: 0;
+  color: white;
+  font-weight: 600;
+}
+
+ul::-webkit-scrollbar {
+  width: 11px;
+}
+
+ul::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.356);
+  border-radius: 5px;
+}
+ul::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.445);
+  border-radius: 5px;
+}
+
+#minijob {
+  position: absolute;
+  height: 70%;
+  width: 25%;
+  min-width: 450px;
+  left: 50%;
+  top: 53%;
+  transform: translate(-50%, -50%);
+}
+
+.max-level{
+  text-align: center;
+}
+
+.player-data {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.player-data p {
+  font-size: 20px;
+}
+
+.xp-progress {
+  border-radius: 10px;
+  width: 60%;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 2px;
+}
+
+.progress-bar {
+  font-size: 15px;
+  background-color: #1a437a;
+  width: 40%;
+  border-radius: 10px;
+}
+
+.close-btn{
+  position: absolute;
+  top: 0;
+  right: 1%;
+  font-size: 13px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.header {
+  position: relative;
+  background: #1a437a;
+  background: linear-gradient(
+    90deg,
+    #1a437a 30%,
+    rgba(255, 0, 0, 0) 100%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  padding: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.main {
+  background-color: rgba(0, 0, 0, 0.678);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+
+ul{
+  list-style: none;
+  overflow-y: auto;
+  max-height: 520px;
+}
+
+.name {
+  display: flex;
+  align-items: center;
+}
+
+.header-image{
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+
+.name p {
+  font-size: 35px;
+  padding-left: 10px;
+}
+
+.logo {
+  width: 70px;
+  height: 70px;
+}
+
+.level *{
+  font-size: 20px;
+}
+
+.levels{
+  padding: 0.3em;
+}
+
+.level {
+  position: relative;
+  padding: 10px;
+  padding-left: 25px;
+  padding-right: 25px;
+  border: solid 2px grey;
+  border-radius: 5px;
+  margin-top: 1%;
+
+}
+
+.levelUnlocked{
+  border: solid 2px rgb(56, 69, 255);
+}
+
+.manage-route{
+  margin-top: 1%;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #1a437a;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.manage-route button{
+  outline: none;
+  border: none;
+  padding: 3px;
+  background-color: transparent;
+  width: 26%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.back{
+  height: 25px;
+}
+
+.start-wrapper{
+  opacity: 0.4;
+}
+
+.route *{
+  font-size: 20px;
+}
+
+.route-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.route-header *{
+  font-size: 22px;
+  padding-left: 0.3em;
+  padding-top: 0.3em;
+}
+
+.routeSelectedBtn{
+  opacity: 1!important;
+}
+
+.routeSelected{
+  border: solid 2px rgb(15, 199, 15)!important;
+}
+
+.routes{
+  padding: 0.3em;
+}
+
+.route{
+  position: relative;
+  padding: 10px;
+  border: solid 2px rgb(56, 69, 255);
+  border-radius: 5px;
+  margin-top: 1%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.route-image{
+  border: solid 2px rgba(0, 0, 0, 0.452);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.route-image img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.levelLocketColor{
+  color: rgb(94, 94, 94);
+}
+
+.levelUnlocketColor{
+  color: rgb(87, 98, 255);
+}
+
+.routeBonusColor{
+  color: rgb(77, 190, 77);
+}
+
+.levelLocketImg{
+  opacity: 0.6;
+}
+
+.level-content {
+  align-items: center;
+  justify-content: center;
+  grid-template: level-content;
+  display: grid;
+  grid-template-columns: 20% 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-template-areas: "level-image-wrapper level-data";
+}
+
+.level-image-wrapper {
+  grid-template: level-image-wrapper;
+}
+
+.level-image {
+  width: 60px;
+  height: 60px;
+}
+
+.level-name{
+  font-size: 22px;
+}
+
+.level-data {
+  padding-left: 10px;
+  grid-template: level-data;
+}
+
+.accept-job img {
+  width: 45px;
+  height: 45px;
+  transition: all 150ms;
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+  z-index: 2;
+}
+
+.acceptJobHoverEffect{
+  transform: scale(1.2);
+}
+
+.padlock{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -50px;
+  margin-left: -50px;
+  width: 100px;
+  height: 100px;
+  opacity: 1;
+}
+
+.selectedLocketLevelEffect{
+  animation: shake;
+  animation-iteration-count: infinite;
+  animation-duration: 1000ms;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
